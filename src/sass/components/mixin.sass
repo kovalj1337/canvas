@@ -1,0 +1,48 @@
+=size($sizes)
+    display: flex
+    align-items: center
+    label
+        width: 100px
+        height: 50px
+    input+label
+        position: relative
+        &::before
+            content: ""
+            top: 0
+            left: 0
+            position: absolute
+            width: 100px
+            height: 50px
+            border-radius: 5px
+            border: 2px solid #4c7792
+        &::after
+            position: absolute
+            content: "#{$sizes}"
+            top: 50%
+            left: 50%
+            font-size: 24px
+            color: #4c7792
+            font-weight: 500
+            font-family: "Open Sans"
+            text-align: center
+            transform: translate(-50%,-50%)
+    input
+        &:checked + label
+            &::before
+                border-color: #000
+            &::after
+                color: #000
+=btn()
+    background-color: #d6edfb
+    border-radius: 10px
+    font-size: 18px
+    text-transform: uppercase
+    color: #4c7792
+    font-weight: 700
+    border: none
+    padding: 0px 25px
+=input()
+    width: 100px
+    height: 50px
+    border: 2px solid #4c7792
+    border-radius: 10px

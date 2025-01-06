@@ -1,3 +1,4 @@
+@import components/mixin
 *
     margin: 0
     font-family: "Open Sans"
@@ -28,33 +29,46 @@ header
     min-width: 50%
     justify-content: center
 .menu-canvas
+    margin: 100px 0
     max-width: 760px
     max-height: 715px
     font-size: 36rem
     color: #333333
     font-weight: 700
-    box-shadow: 0 0 5px rgba(0,0,0,0.05)
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1)
+    border-radius: 10px
+    padding: 20px
+    h2
+        padding-bottom: 20px 
 .molbert
     max-height: 900px
     
 .sizes
     flex-direction: row
+    gap: 20px
     input
         display: none
 .first
+    +size("30x30")
+.second
+    +size("30x90")
+.thirst
+    +size("30x90")
+.fourth
+    +size("90x150")
+.btn-blue
+    +btn()
+.x-input
+    input
+        +input()
+.y-input
+    input
+        +input()
+.personal-size
+    gap: 30px
+.multiplication
     position: relative
-    label
-        font-size: 24px
-        color: #4c7792
-        font-weight: 500
-        font-family: "Open Sans"
-        text-align: center
-        &::before
-            top: 0
-            left: 0
-            position: absolute
-            content: ""
-            width: 100px
-            height: 50px
-            border-radius: 5px
-            border: 2px solid #4c7792
+    svg
+        position: absolute
+        top: 50%
+        transform: translateX(-50%)
