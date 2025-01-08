@@ -5,6 +5,7 @@
         width: 100px
         height: 50px
     input+label
+        cursor: pointer
         position: relative
         &::before
             content: ""
@@ -46,3 +47,37 @@
     height: 50px
     border: 2px solid #4c7792
     border-radius: 10px
+=checkbox()
+    input+label
+        cursor: pointer
+        position: relative
+        &::before
+            content: ""
+            top: 0
+            left: -40px
+            position: absolute
+            width: 25px
+            height: 25px
+            border-radius: 5px
+            border: 2px solid #4c7792
+    input
+        &:checked + label
+            &::after
+                content: ""
+                top: 3px
+                left: -32px
+                position: absolute
+                width: 10px
+                height: 15px
+                border-left: 3px solid #4c7792
+                border-top: 3px solid #4c7792
+                transform: rotate(210deg)
+=btn-green($sizes)
+    font-size: 24px
+    text-transform: uppercase
+    color: #ffffff
+    background-color: #56c107
+    border: none
+    border-radius: 10px
+    padding: #{$sizes}
+    cursor: pointer

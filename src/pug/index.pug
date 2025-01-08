@@ -48,7 +48,29 @@ html(lang="en")
                             .y-input
                                 p висота
                                 input(type="text" id="y-input")
-                            p.btn.flex
-                                button(type="submit").btn-blue задати розмір
+                            p.btn
+                                button(type="submit").btn-blue підрахувати
+                    hr
+                    .additional-service 
+                        h2 Додаткові опції
+                        .additional-service-menu.flex
+                            .expensive-kanvas.flex.space-between
+                                p
+                                    input(type="checkbox" name="additional" id="expensive-kanvas")
+                                    label(for="expensive-kanvas") дорожче полотно
+                                p + 35 грн
+                            .with-frame.flex.space-between
+                                p
+                                    input(type="checkbox" name="additional" id="with-frame")
+                                    label(for="with-frame") з рамкою
+                                p + 10 грн
+                            .delivery.flex.space-between
+                                p
+                                    input(type="checkbox" name="additional" id="delivery")
+                                    label(for="delivery") з доставкою (Нова Пошта)
+                                p + 40 грн
+                    hr
+                    form(action="").total-sum
+                        button(type="submit") придбати
         footer.wrapper
             .copyright

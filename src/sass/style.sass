@@ -8,6 +8,8 @@ a
     font-family: "Open Sans"
 header
     box-shadow: -0.174px 9px 5px rgba(0,0,0,0.06)
+hr
+    margin: 50px 0
 .flex
     display: flex
 .wrapper
@@ -66,9 +68,28 @@ header
         +input()
 .personal-size
     gap: 30px
+    align-items: center
 .multiplication
     position: relative
     svg
         position: absolute
         top: 50%
         transform: translateX(-50%)
+.additional-service-menu
+    flex-direction: column
+    gap: 20px
+    p
+        margin-left: 40px  
+        font-size: 18px
+        color: #333333
+        label
+            font-size: 18px
+            color: #4c7792
+        input
+            display: none
+        +checkbox()
+.space-between
+    justify-content: space-between
+.total-sum
+    button
+        +btn-green(30px 60px)
