@@ -6,6 +6,7 @@ html(lang="en")
         title Document
         link(rel="stylesheet", href="css/styles.css")
     body
+        .bgc-blur
         header
             .header-menu.flex.wrapper
                 .logo
@@ -14,10 +15,11 @@ html(lang="en")
                 .menu.flex
                     a(href="#") Галерея
                     a(href="#") Про нас
-                    a(href="#").btn замовити дзвінок    
+                    a(href="#").btn-green замовити дзвінок    
         main.flex
             .canvas.flex
                 picture.molbert
+                    .p.molbert-sam
                     img(src="/img/molbert.png", alt="")
             .menu-to-canvas.wrapper
                 .menu-canvas
@@ -25,27 +27,27 @@ html(lang="en")
                     form(action="") 
                         .sizes.flex
                             p.first
-                                input(type="radio" name="size" id="30x30")
-                                label(for="30x30")
+                                input(type="radio" name="size" id="first" value="30")
+                                label(for="first")
                             p.second
-                                input(type="radio" name="size" id="30x90")
-                                label(for="30x90")
+                                input(type="radio" name="size" id="x90" value="90")
+                                label(for="x90")
                             p.thirst 
-                                input(type="radio" name="size" id="90x120")
-                                label(for="30x120")
+                                input(type="radio" name="size" id="x120" value="120")
+                                label(for="x120")
                             p.fourth
-                                input(type="radio" name="size" id="90x150")
-                                label(for="30x150")
+                                input(type="radio" name="size" id="x150" value="150")
+                                label(for="x150")
                             p.btn
                                 button(type="submit").btn-blue задати розмір
                     form(action="")
                         .personal-size.flex
-                            .x-input
+                            .x-input.settings
                                 p ширина
                                 input(type="text" id="x-input")
                             .multiplication
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-                            .y-input
+                            .y-input.settings
                                 p висота
                                 input(type="text" id="y-input")
                             p.btn
@@ -56,21 +58,25 @@ html(lang="en")
                         .additional-service-menu.flex
                             .expensive-kanvas.flex.space-between
                                 p
-                                    input(type="checkbox" name="additional" id="expensive-kanvas")
+                                    input(type="checkbox" name="additional" id="expensive-kanvas" value="35")
                                     label(for="expensive-kanvas") дорожче полотно
                                 p + 35 грн
                             .with-frame.flex.space-between
                                 p
-                                    input(type="checkbox" name="additional" id="with-frame")
+                                    input(type="checkbox" name="additional" id="with-frame" value="10")
                                     label(for="with-frame") з рамкою
                                 p + 10 грн
                             .delivery.flex.space-between
                                 p
-                                    input(type="checkbox" name="additional" id="delivery")
+                                    input(type="checkbox" name="additional" id="delivery" value="40")
                                     label(for="delivery") з доставкою (Нова Пошта)
                                 p + 40 грн
                     hr
-                    form(action="").total-sum
-                        button(type="submit") придбати
-        footer.wrapper
+                    form(action="").total-sum.flex
+                        button.buy придбати
+                        p.flex Загальна сума:
+                            span(id="price") 0грн
+        footer
             .copyright
+                p &copy Kanvas. Всі права захищені
+        script(src="js/scripts.js")

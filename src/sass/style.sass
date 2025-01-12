@@ -14,22 +14,52 @@ hr
     display: flex
 .wrapper
     margin: 0 50px 0
+.bgc-black
+    position: fixed
+    right: -100%
+    top: 0
+    width: 100%
+    height: 100%
+    background: rgba(#fff, 0.2)
+    backdrop-filter: blur(5px)
+    transition: all 0.4s ease
+    z-index: 5
 .header-menu
     justify-content: space-between
     align-items: center
     padding: 36px 0
 .menu
-    column-gap: 20px
+    column-gap: 50px
+    align-items: center
     a
         font-size: 18px
         text-transform: uppercase
         color: #4c7792
         font-weight: 70
         text-decoration: none
+        transition: all 0.5s ease 
+        &:last-child
+            +btn-green(10px 30px)
+            font-size: 18px
+            text-transform: uppercase
+            color: #ffffff
+            margin-left: 50px
+        &:hover
+            color: #333
 .canvas
-    background-image: linear-gradient(181deg, #bfe5f5 0%, #c6eee8 100%)
+    background-image: linear-gradient(181deg, #bfe5f5 20%, #c6eee8 80%)
     min-width: 50%
     justify-content: center
+    align-items: flex-end
+.molbert-sam
+    position: absolute
+    width: 300px
+    height: 300px
+    background-color: #fff
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-27%)
+    transition: all 0.5s ease 
 .menu-canvas
     margin: 100px 0
     max-width: 760px
@@ -43,6 +73,8 @@ hr
     h2
         padding-bottom: 20px 
 .molbert
+    z-index: 1
+    position: relative
     max-height: 900px
     
 .sizes
@@ -55,7 +87,7 @@ hr
 .second
     +size("30x90")
 .thirst
-    +size("30x90")
+    +size("90x120")
 .fourth
     +size("90x150")
 .btn-blue
@@ -67,6 +99,7 @@ hr
     input
         +input()
 .personal-size
+    margin-top: 30px
     gap: 30px
     align-items: center
 .multiplication
@@ -91,5 +124,34 @@ hr
 .space-between
     justify-content: space-between
 .total-sum
+    padding-right: 20px 
+    border-radius: 10px
+    background-color: #d6edfb
+    align-items: center
+    justify-content: space-between
     button
         +btn-green(30px 60px)
+    span
+        content: "-dasdasdasd"
+        font-size: 48px
+        color: #56c107
+        margin-left: 10px 
+    p
+        align-items: center
+        font-size: 18px
+        text-transform: uppercase
+        color: #333333
+        position: relative
+.settings
+    font-size: 16px
+    color: #333333
+    font-weight: 500
+.copyright
+    text-align: center
+    background-color: #333333
+    width: 100%
+    p
+        font-size: 18px
+        color: #d6edfb
+        font-weight: 500
+        padding: 20px 0
