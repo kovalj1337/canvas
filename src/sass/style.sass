@@ -10,6 +10,10 @@ header
     box-shadow: -0.174px 9px 5px rgba(0,0,0,0.06)
 hr
     margin: 50px 0
+main
+    flex-direction: column
+    +media(1440)
+        flex-direction: row
 .flex
     display: flex
 .wrapper
@@ -29,6 +33,7 @@ hr
     align-items: center
     padding: 36px 0
 .menu
+    display: none
     column-gap: 50px
     align-items: center
     a
@@ -46,6 +51,8 @@ hr
             margin-left: 50px
         &:hover
             color: #333
+    +media(768)
+        display: flex
 .canvas
     background-image: linear-gradient(181deg, #bfe5f5 20%, #c6eee8 80%)
     min-width: 50%
@@ -60,36 +67,52 @@ hr
     top: 50%
     transform: translate(-50%,-27%)
     transition: all 0.5s ease 
+.menu-to-canvas
+    justify-content: center
+    display: flex
 .menu-canvas
+    text-align: center
     margin: 100px 0
     max-width: 760px
-    max-height: 715px
     font-size: 36rem
     color: #333333
     font-weight: 700
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1)
     border-radius: 10px
-    padding: 20px
     h2
         padding-bottom: 20px 
+    +media(340)
+        padding: 20px
 .molbert
     z-index: 1
     position: relative
-    max-height: 900px
+    img
+        max-width: 300px
+    +media(768)
+        max-height: 900px
+    +media(1440)
+        img
+            max-width: none
     
 .sizes
-    flex-direction: row
+    flex-direction: column
     gap: 20px
     input
         display: none
+    +media(680)
+        flex-direction: row
 .first
     +size("30x30")
+    justify-content: center
 .second
     +size("30x90")
+    justify-content: center
 .thirst
     +size("90x120")
+    justify-content: center
 .fourth
     +size("90x150")
+    justify-content: center
 .btn-blue
     +btn()
 .x-input
@@ -99,9 +122,12 @@ hr
     input
         +input()
 .personal-size
+    flex-direction: column
     margin-top: 30px
     gap: 30px
     align-items: center
+    +media(680)
+        flex-direction: row
 .multiplication
     position: relative
     svg
@@ -109,6 +135,7 @@ hr
         top: 50%
         transform: translateX(-50%)
 .additional-service-menu
+    text-align: left
     flex-direction: column
     gap: 20px
     p
@@ -121,19 +148,21 @@ hr
         input
             display: none
         +checkbox()
+.price-additional
+    text-align: right
 .space-between
     justify-content: space-between
 .total-sum
-    padding-right: 20px 
+    flex-direction: column 
     border-radius: 10px
     background-color: #d6edfb
     align-items: center
     justify-content: space-between
     button
-        +btn-green(30px 60px)
+        +btn-green(30px 25px)
     span
         content: "-dasdasdasd"
-        font-size: 48px
+        font-size: 28px
         color: #56c107
         margin-left: 10px 
     p
@@ -142,6 +171,10 @@ hr
         text-transform: uppercase
         color: #333333
         position: relative
+    +media(768)
+        padding-right: 20px
+        button
+            +btn-green(30px 60px)
 .settings
     font-size: 16px
     color: #333333

@@ -60,17 +60,17 @@ html(lang="en")
                                 p
                                     input(type="checkbox" name="additional" id="expensive-kanvas" value="35")
                                     label(for="expensive-kanvas") дорожче полотно
-                                p + 35 грн
+                                p.price-additional + 35 грн
                             .with-frame.flex.space-between
                                 p
                                     input(type="checkbox" name="additional" id="with-frame" value="10")
                                     label(for="with-frame") з рамкою
-                                p + 10 грн
+                                p.price-additional + 10 грн
                             .delivery.flex.space-between
                                 p
                                     input(type="checkbox" name="additional" id="delivery" value="40")
                                     label(for="delivery") з доставкою (Нова Пошта)
-                                p + 40 грн
+                                p.price-additional + 40 грн
                     hr
                     form(action="").total-sum.flex
                         button.buy придбати
